@@ -35,6 +35,7 @@ class User extends Controller
 
         // Correct login. Authenticate the user
         $_SESSION['username'] = $_POST['username'];
+        $_SESSION['userid']   = $user['id'];
         echo 1;
     }
 }

@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if(isset($_GET['logout']))
+{
+  unset($_SESSION['username']);
+}
+
 /**
  * Composer
  */
@@ -19,6 +26,7 @@ $router = new Core\Router();
 
 // Add the routes
 $router->add('', ['controller' => 'Home', 'action' => 'index']);
+$router->add('{controller}/{id:\d+}/{action}');
 $router->add('{controller}/{action}');
 
 $router->dispatch($_SERVER['QUERY_STRING']);

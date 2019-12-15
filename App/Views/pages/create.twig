@@ -1,0 +1,21 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+  <div class="post-preview">
+
+    <form method="post" action="/Post/createPost">
+      <a href="/">
+        <i class="fas fa-long-arrow-alt-left fa-2x"></i>
+      </a>
+
+      <input type="submit" class="btn btn-primary" style="float: right;" value="Create" /><br /><br />
+      <input type="text" name="title" class="form-control" placeholder="Title" autocomplete="off">
+      <br/>
+      <textarea class="form-control" name="content" rows="30"></textarea>
+
+    </form>
+
+  </div>
+
+{% endblock %}

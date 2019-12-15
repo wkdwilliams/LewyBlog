@@ -2,9 +2,11 @@
 
 {% block body %}
 
+{% if loggedin %}<button onclick="location.href='/Post/create'" class="btn btn-primary" style="float: right;">Create</button><br />{% endif %}
   {% for post in posts %}
     <div class="post-preview">
-      <h2 class="post-title">{{ post['title']|raw }}</h2>
+
+      <h2 class="post-title"><a href="/Post/{{ post['id'] }}/index">{{ post['title']|raw }}</a></h2>
       <p>{{ post['content']|raw|nl2br }}</p>
       <p class="post-meta">Posted by <a href="#">{{ post['user'] }}</a> on {{ post['date'] }}</p>
     </div>

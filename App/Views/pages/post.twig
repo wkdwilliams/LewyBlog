@@ -1,0 +1,21 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+  <div class="post-preview">
+    <a href="/"><i class="fas fa-long-arrow-alt-left fa-2x"></i></a>
+
+    {% if loggedin %}<button onclick="location.href='/Post/{{post['id']}}/edit'" class="btn btn-primary" style="float: right;">Edit</button>{% endif %}
+
+    <h2 class="post-title">
+      <a href="#">{{ post['title']|raw }}</a>
+    </h2>
+    <p>{{ post['content']|raw|nl2br }}</p>
+    <p class="post-meta">Posted by
+      <a href="#">{{ post['user'] }}</a>
+      on
+      {{ post['date'] }}</p>
+  </div>
+  <hr>
+
+{% endblock %}

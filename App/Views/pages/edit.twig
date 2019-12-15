@@ -1,0 +1,22 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+
+  <div class="post-preview">
+
+    <form method="post" action="/Post/{{post['id']}}/editPost">
+      <a href="/">
+        <i class="fas fa-long-arrow-alt-left fa-2x"></i>
+      </a>
+
+      <input type="submit" class="btn btn-primary" style="float: right;" value="Save" /><br />
+      {% if edited %}<p style="color: green; float:left">Edited</p>{% else %}<br />{% endif %}
+      <input type="text" name="title" class="form-control" value="{{ post['title']|raw|replace({'"': '\''}) }}" placeholder="Title" autocomplete="off">
+      <br/>
+      <textarea class="form-control" name="content" rows="30">{{ post['content']|raw }}</textarea>
+
+    </form>
+
+  </div>
+
+{% endblock %}
