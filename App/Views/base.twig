@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Lewis Williams | Blog</title>
+
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href="/css/clean-blog.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/fav.ico"/>
+
+  </head>
+
+  <body>
+    <header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-md-16 mx-auto">
+            <div class="site-heading"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 col-md-10 mx-auto">
+          {% block body %}{% endblock %}
+          <div class="clearfix">
+            <!-- {% if error is not defined %}<a id="olderPosts" class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>{% endif %} -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <div style="position: fixed; top:97%; left:20px; font-size: 14px">
+      <b>LewyBlog</b> - Blog software create by <a target="_blank" href="https://lewiswilliams.info/" style="text-decoration: underline">Lewis Williams</a>
+    </div>
+
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+
+</html>
