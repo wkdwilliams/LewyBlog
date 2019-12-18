@@ -36,6 +36,8 @@ class User extends Controller
         // Correct login. Authenticate the user
         $_SESSION['username'] = $_POST['username'];
         $_SESSION['userid']   = $user['id'];
+        $_SESSION['token']    = bin2hex(openssl_random_pseudo_bytes(16));
+
         echo 1;
     }
 }

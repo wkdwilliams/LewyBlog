@@ -20,12 +20,15 @@ class Post extends Controller
         if(!isset($_SESSION['username']) || !isset($this->route_params['id'])) die(header('Location: /'));
         $post = PostModel::get($this->route_params['id']);
 
-        View::renderTemplate("/pages/edit.twig", ["post" => $post]);
+        View::renderTemplate("/pages/edit.twig", ["post" => $post, "token" => $_SESSION['token']]);
     }
 
     public function editPost()
     {
         if(!isset($_SESSION['username']) || !isset($_POST)) return;
+
+        // CSRF protection
+        if($_SESSION['token'] != $_POST['token']) return;
 
         PostModel::edit($this->route_params['id'], $_POST['title'], $_POST['content']);
 
@@ -38,12 +41,15 @@ class Post extends Controller
     {
         if(!isset($_SESSION['username'])) return;
 
-        View::renderTemplate("/pages/create.twig");
+        View::renderTemplate("/pages/create.twig", ["token" => $_SESSION['token']]);
     }
 
     public function createPost()
     {
         if(!isset($_SESSION['username']) || !isset($_POST)) return;
+
+        // CSRF protection
+        if($_SESSION['token'] != $_POST['token']) return;
 
         PostModel::create($_POST['title'], $_POST['content'], $_SESSION['userid']);
 

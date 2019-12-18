@@ -16,7 +16,7 @@
       <input type="text" name="title" class="form-control" value="{{ post['title']|raw|replace({'"': '\''}) }}" placeholder="Title" autocomplete="off">
       <br/>
       <textarea class="form-control" name="content" rows="30">{{ post['content']|raw }}</textarea>
-
+      <input type="hidden" name="token" value="{{token}}">
     </form>
 
   </div>
