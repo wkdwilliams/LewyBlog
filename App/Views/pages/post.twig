@@ -1,5 +1,11 @@
 {% extends 'base.twig' %}
 
+{% block title %}{{ post['title']|striptags }}{% endblock %}
+{% block meta %}
+  <meta name="description" content="{{ post['title']|striptags }}">
+<meta name="author" content="{{ post['user'] }}">
+{% endblock %}
+
 {% block body %}
 
   <div class="post-preview">

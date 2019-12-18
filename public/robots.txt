@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /Post/create
+Disallow: /Post/edit
+
+Allow: /Post/*/index
