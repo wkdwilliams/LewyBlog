@@ -10,6 +10,10 @@ class Home extends Controller
 {
     public function indexAction()
     {
-        View::renderTemplate("/pages/home.twig", ["posts" => PostModel::getAll(), "loggedin"=>isset($_SESSION['username'])]);
+        View::renderTemplate("/pages/home.twig", [
+          "posts"     => PostModel::getAll(),
+          "loggedin"  => isset($_SESSION['username']),
+          "blogName"  => \App\Config::BLOG_NAME
+        ]);
     }
 }
