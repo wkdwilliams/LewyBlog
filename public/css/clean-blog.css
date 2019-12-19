@@ -10,6 +10,13 @@ body {
   font-family: 'Lora', 'Times New Roman', serif;
 }
 
+p:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, pre:hover, small:hover{
+  cursor: default;
+}
+a:hover, a.image:hover{
+  cursor: pointer;
+}
+
 p {
   line-height: 1.5;
   margin: 30px 0;
