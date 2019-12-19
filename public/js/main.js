@@ -11,4 +11,8 @@ function login(){
   });
 }
 
+// Lazy load images
+lozad().observe();
+
+// Popup image
 $('.image').magnificPopup({type:'image'});

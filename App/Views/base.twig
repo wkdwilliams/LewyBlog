@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+    <header class="masthead" style="background-image: url('/img/home-bg.jpg'); margin-bottom: 25px">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -32,11 +32,12 @@
     </header>
     <div class="container">
       <div class="row">
+
         <div class="col-lg-10 col-md-10 mx-auto">
           {% block body %}{% endblock %}
-          <div class="clearfix">
-            <!-- {% if error is not defined %}<a id="olderPosts" class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>{% endif %} -->
-          </div>
+          <!-- <div class="clearfix">
+             {% if error is not defined %}<a id="olderPosts" class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>{% endif %}
+          </div> -->
         </div>
       </div>
     </div>
@@ -47,10 +48,11 @@
       <b>LewyBlog</b> - Blog software created by <a target="_blank" href="https://lewiswilliams.info/" style="text-decoration: underline">Lewis Williams</a>
     </div>
     {% endif %}
-    
+
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/vendor/popup/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script src="/js/main.js"></script>
 
   </body>
