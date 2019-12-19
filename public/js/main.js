@@ -16,3 +16,8 @@ lozad().observe();
 
 // Popup image
 $('.image').magnificPopup({type:'image'});
+
+// Remove all break tags from pretty print
+$('.prettyprint').each((index, el) => {
+  $(el).find("br").remove();
+});
