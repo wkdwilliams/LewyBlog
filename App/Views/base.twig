@@ -5,8 +5,6 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>{% block title %}{% endblock %}</title>
     {% block meta %}{% endblock %}
@@ -44,10 +42,12 @@
     </div>
     <br/>
 
+    {% if isMobile == false %}
     <div style="position: fixed; top:97%; left:20px; font-size: 14px;">
       <b>LewyBlog</b> - Blog software created by <a target="_blank" href="https://lewiswilliams.info/" style="text-decoration: underline">Lewis Williams</a>
     </div>
-
+    {% endif %}
+    
     <script src="/vendor/jquery/jquery.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/vendor/popup/jquery.magnific-popup.min.js"></script>

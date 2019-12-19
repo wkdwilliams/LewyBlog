@@ -62,6 +62,17 @@ class ComposerStaticInit7c0baa335460178fecca298af007aa1c
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
             ),
         ),
+        'D' => 
+        array (
+            'Detection' => 
+            array (
+                0 => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/namespaced',
+            ),
+        ),
+    );
+
+    public static $classMap = array (
+        'Mobile_Detect' => __DIR__ . '/..' . '/mobiledetect/mobiledetectlib/Mobile_Detect.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -70,6 +81,7 @@ class ComposerStaticInit7c0baa335460178fecca298af007aa1c
             $loader->prefixLengthsPsr4 = ComposerStaticInit7c0baa335460178fecca298af007aa1c::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit7c0baa335460178fecca298af007aa1c::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit7c0baa335460178fecca298af007aa1c::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit7c0baa335460178fecca298af007aa1c::$classMap;
 
         }, null, ClassLoader::class);
     }
