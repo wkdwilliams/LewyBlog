@@ -21,3 +21,10 @@ $('.image').magnificPopup({type:'image'});
 $('.prettyprint').each((index, el) => {
   $(el).find("br").remove();
 });
+
+$('.PDFView').EZView();
+
+$('.PDFView').on('click', () => {
+  //$('div.container')[0].remove();
+  $('.tools-container').remove();
+});
